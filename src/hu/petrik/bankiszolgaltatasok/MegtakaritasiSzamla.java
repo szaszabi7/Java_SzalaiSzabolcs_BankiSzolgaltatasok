@@ -28,6 +28,6 @@ public class MegtakaritasiSzamla extends Szamla{
     }
 
     public void kamatJovairas() {
-        aktualisEgyenleg = (int)(aktualisEgyenleg * (1 + (kamat/100)));
+        aktualisEgyenleg = (int)(aktualisEgyenleg * (1 + (alapKamat/100)));
     }
 }

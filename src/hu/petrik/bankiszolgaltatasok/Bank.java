@@ -41,22 +41,27 @@ public class Bank {
 
         for (Szamla value : szamla) {
             if (value.getTulajdonos() == tulajdonos) {
-                if (value.getAktualisEgyenleg() > maxSz.getAktualisEgyenleg()) {
+                if (maxSz != null) {
+                    if (value.getAktualisEgyenleg() > maxSz.aktualisEgyenleg) {
+                        maxSz = value;
+                    }
+                } else {
                     maxSz = value;
                 }
+
             }
         }
 
         return maxSz;
     }
 
-    public long getOsszHitelKeret() {
+    /*public long getOsszHitelKeret() {
         int osszeg = 0;
 
-        /*for (int i = 0; i < szamla.size(); i++) {
-
-        }*/
+        for (Szamla value: szamla) {
+            if (value.getHitelKeret())
+        }
 
         return osszeg;
-    }
+    }*/
 }
